@@ -1,0 +1,27 @@
+{
+  "name": "web-studio-australia",
+  "version": "1.0.0",
+  "description": "Web Studio Australia - Website with AI-powered live chat system",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install && cd ../ai-agent && pip install -r requirements.txt",
+    "dev": "docker-compose -f docker-compose.yml up -d",
+    "dev:down": "docker-compose -f docker-compose.yml down",
+    "dev:logs": "docker-compose -f docker-compose.yml logs -f",
+    "migrate": "cd backend && npm run migrate",
+    "seed": "cd backend && npm run seed",
+    "build": "cd frontend && npm run build",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend && npm test"
+  },
+  "keywords": [
+    "web design",
+    "web development",
+    "live chat",
+    "AI chatbot",
+    "Australia"
+  ],
+  "author": "Web Studio Australia",
+  "license": "MIT"
+}
